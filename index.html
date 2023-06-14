@@ -90,10 +90,10 @@
 
             <div id="display">
                 <form name="google-sheet" method="post">
-                    <input type="text" id="name"  name="username" placeholder="Enter Teacher's name" required> <br>
-                    <input type="text"  id="reason" placeholder="reason" required> <br>
+                    <input type="text" id="name"  name="username" placeholder="Enter Visitor's name" required> <br>
+                    <input type="number"  id="reason" placeholder="Number of People" required> <br>
                     <input type="date" name="Flat no" id="tim2" placeholder="Date" required> <br>
-                    <input type="time" name="Flat no" id="tim1" placeholder="time" required> <br>
+                    <input type="number" name="Flat no" id="tim1" placeholder="Flat Number" required> <br>
                     
                     <input type="text" name="password" id="CID" readonly placeholder="Auto Generated User ID">
                 </form>
@@ -143,7 +143,7 @@
                         // document.getElementById('result').innerHTML = '<span class="result">' + qrCodeMessage + '</span>';
                         // document.getElementById('name').value = qrCodeMessage;
                     
-                        const scriptURL = 'https://script.google.com/macros/s/AKfycbxIPkGK9P_KaEe6jSBfBu7lTRqU3tlLAkGos8bYnAJmr1hkkJwDQCHft-OtMIfLsGc/exec'
+                        const scriptURL = 'https://script.google.com/macros/s/AKfycbx-eQ5htBwut9claOukVUzsrm8ei8Zm6JdYDag--icmvNKeFFv0ubwjYbHRngt1_5uI/exec'
                         // const scriptURL2 = 'https://script.google.com/macros/s/AKfycbxTfvtSfT7oTlZkH2GhVBvcHiVh7cMqjlFruf55xnB1VXubXN0FSGV3Nji5yQNe3D8Mdg/exec'
                     
                         const form = document.forms['google-sheet']
