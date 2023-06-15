@@ -41,7 +41,10 @@
 
 <style>
     body{
-/*         background-color: black; */
+        background-color: black;
+        background-image: url(./paradise.png);
+        color: white;
+
     }
    
     #design{
@@ -67,10 +70,11 @@
     #new{
         margin-bottom: 10%;
         margin-left: 2%;
+        color: white;
     }
     button{
         background-color: #92ed93;
-        color: black;
+        color: rgb(255, 255, 255);
         border-radius: 6px;
         height: 50px;
         font-weight: bolder;
@@ -89,16 +93,38 @@
 
 
             <div id="display">
+                <h2>Welcome to <br><br> Pre - Visitor Registration System</h2>
+
                 <form name="google-sheet" method="post">
-                    <input type="text" id="name"  name="username" placeholder="Enter Visitor's name" required> <br>
-                    <input type="number"  id="reason" placeholder="Number of People" required> <br>
-                    <input type="date" name="Flat no" id="tim2" placeholder="Date" required> <br>
-                    <input type="number" name="Flat no" id="tim1" placeholder="Flat Number" required> <br>
-                    
+                    <table>
+                        <tr>
+                            <td>
+                    <input type="text" id="name"  name="username" placeholder="Enter Visitor's name" required> </td>
+                  <td>  <input type="number"  id="reason" placeholder="Number of People" required> <br>
+                  </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="date" name="Flat no" id="tim2" placeholder="Date" style="width: 167px;" required> <br>
+
+                
+                </td>
+            <td>
+                <input type="number" name="Flat no" id="tim1" placeholder="Flat Number" required> <br>
+
+            </td>
+            </tr>
+            <tr>
+                <td>
                     <input type="text" name="password" id="CID" readonly placeholder="Auto Generated User ID">
+
+                </td>
+            </tr>
+                    
+                    </table>
                 </form>
                 
-                <button onclick="AddUser()">I authorise this person to Enter</button>
+                <button onclick="AddUser()" style="margin-left: 20%;">I authorise this person to Enter</button>
             </div>
             <br><div id="new">
                 
@@ -159,8 +185,10 @@
                     
             
                         document.getElementById("display").style.display = "none";
-                        document.getElementById("new").innerHTML="Visitor OTP of   Mr/Ms/Mrs  "+ " - " + nameu + " to visit  For " + reason +" People."+ " "+ "Please find the"+ " unique Visitor  ID is : " 
-                        + randval + "  on " + datee + " "+ " at Flat "+ " "+timee ;
+                        // OTP of Visitor Mr/Ms/Mrs  "+ " - " + nameu + " ,  for " + reason +" Person People."+ " "+ "Please find the"+ " unique Visitor  ID is : " 
+                        // + randval + "  on " + datee + " "+ " at Flat "+ " "+timee
+                        document.getElementById("new").innerHTML="OTP of Visitor Mr/Ms/Mrs  "+ " - " + nameu + ", for "+ " " + reason +" person/people."+ " "+ "Please find the"+ " OTP : " + " "
+                        + randval + "visit scheduled on " + datee + " "+ " by resident in Flat "+ " "+timee ;
                     //   document.getElementById("new").innerHTML=""
                     }
                     </script>
@@ -254,7 +282,6 @@
 
 
 </html>
-
 
 
 
